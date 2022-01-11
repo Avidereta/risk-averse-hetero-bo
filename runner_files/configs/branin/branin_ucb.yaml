@@ -1,0 +1,19 @@
+'expand':
+  - ['bo_method', 'name']
+  - ['benchmark', 'sigma']
+  - ['restart']
+'bo_method': {
+    'name': ['ucb'],
+    'beta': 2,
+}
+'benchmark': {
+     'type': ['branin'],
+     'repeat_eval': 10,
+     'sigma': [1, 2]
+}
+'seed': 3
+'iter_save': 1
+'n_budget': 4
+'restart': [0, 1, 2]
+'n_initial': 2
+'dname': '../exp_output/{c[benchmark][type]}/DRYRUN/sigma{c[benchmark][sigma]}/{c[bo_method][name]}/restart{c[restart]}'

@@ -1,0 +1,23 @@
+'expand':
+  - ['bo_method', 'name']
+  - ['bo_method', 'gamma']
+  - ['benchmark', 'sigma']
+  - ['benchmark', 'type']
+  - ['restart']
+'bo_method': {
+    'name': ['rahbo', 'rahbo_us'],
+    'beta': 2,
+    'gamma': [0.5, 1],
+    'n_budget_var': 4
+}
+'benchmark': {
+     'type': ['sine'],
+     'repeat_eval': 10,
+     'sigma': [1, 2]
+}
+'seed': 3
+'iter_save': 1
+'n_budget': 4
+'restart': [0, 1, 2]
+'n_initial': 2
+'dname': '../exp_output/{c[benchmark][type]}/DRYRUN/sigma{c[benchmark][sigma]}/{c[bo_method][name]}/gamma{c[bo_method][gamma]}/restart{c[restart]}'

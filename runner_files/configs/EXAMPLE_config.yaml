@@ -1,0 +1,19 @@
+'expand': # different experiments to automatically iterate over: define a list of parameters if the parameter is in expand   
+  - ['benchmark', 'sigma']
+  - ['benchmark', 'type']
+  - ['restart']
+'bo_method': {
+    'name': 'ucb', # BO method name from ['ucb', 'raucb', 'raucb_us', 'random_search']
+    'beta': 2      # BO method specific parameters
+}
+'benchmark': {
+     'type': ['sine'],  # benchmark, see rabo.test_functions_benchmark_factory 
+     'repeat_eval': 10, # benchnark specific parameters (list if in expand)
+     'sigma': [0.5, 1]  # benchnark specific parameters (list if in expand)
+}
+'seed': 3                 # random seed for initial evaluations generation
+'iter_save': 2            # how often dump the results 
+'n_budget': 10            # number of BO iterations 
+'restart': [0, 1, 2, 3]   # how many times restart BO (to get mean/confidence) (list if in expand) 
+'n_initial': 10           # number of initial points for BO (used to choose GP)
+'dname': 'YOUR_FOLDER/exp_output/{c[benchmark][type]}/sigma{c[benchmark][sigma]}/{c[bo_method][name]}/restart{c[restart]}'

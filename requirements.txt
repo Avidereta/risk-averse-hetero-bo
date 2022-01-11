@@ -1,0 +1,10 @@
+botorch==0.4.0
+certifi==2018.8.24
+gpytorch==1.4.1
+jupyter==1.0.0
+numpy==1.20.1
+scipy==1.1.0
+seaborn==0.9.0
+torch==1.7.1
+tqdm==4.26.0
+PyYAML==5.4.1
